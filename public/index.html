@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Coin Flip Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="center">
+        <h1>Bitcoin Coin Flip Game</h1>
+
+        <!-- Connect Wallet Button -->
+        <button id="connectWallet">Connect Wallet</button>
+        <div id="walletStatus"></div>
+
+        <!-- Game Section -->
+        <div id="game" style="display:none;">
+            <h2>Place Your Bet</h2>
+            <p>Current Balance: <span id="balance"></span></p>
+
+            <!-- Input for Bet Amount -->
+            <div class="inputbox">
+                <input type="number" id="betAmount" step="0.0001" min="0" required>
+                <span>Bet Amount (BTC)</span>
+            </div>
+            
+            <!-- Select Bet Side -->
+            <div class="inputbox">
+                <select id="betSide" required>
+                    <option value="heads">Heads</option>
+                    <option value="tails">Tails</option>
+                </select>
+               
+            </div>
+            
+            <!-- Flip Coin Button -->
+            <div class="inputbox">
+                <audio id="coinFlipSound" src="coin-flip-88793.mp3" preload="auto">Flip Coin</audio>
+
+                <input type="button" id="flipCoin" value="Flip Coin">
+            </div>
+
+            <!-- Coin Container -->
+            <div class="coin-container" id="coinContainer">
+                <div class="coin" id="coin">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231016151806/tails.png" alt="Heads">
+                </div>
+                <p class="result" id="result"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
